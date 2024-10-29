@@ -35,29 +35,6 @@ void backdrop_init() {
 
 unsigned char backdrop_get_block(char map_x, char map_y)
 {
-  /*
- int find = (map_y * 32) + map_x;
- int curr = -1;
- int ptr = 0;
- unsigned char block = 0;
- unsigned char run = 0;
- 
- while (curr < find) {
-	 block = pgm_read_byte_near (MAP_DATA + ptr);
-  
-	 if (block > 128) {
-		 block -= 128;
-		 ptr++;
-		 run = pgm_read_byte_near (MAP_DATA + ptr);
-		 curr += run;
-	 } else {
-	  curr++;
-	 }
-   
-	 ptr++;
- }
- */
- 
  unsigned char block = pgm_read_byte_near ( MAP_DATA + ((map_y * 32) + map_x)) -1;
  return block;
 }
