@@ -1,0 +1,1 @@
+cmd < requirements.sh
